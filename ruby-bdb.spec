@@ -1,13 +1,13 @@
 %define rbname bdb
 %define version 0.6.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: An interface to Berkeley DB for Ruby
 Name: ruby-%{rbname}
 
 Version: %{version}
 Release: %{release}
-Group: Development/Other
+Group: Development/Ruby
 License: GPL
 URL: http://moulon.inra.fr/ruby/bdb.html
 Source0: ftp://moulon.inra.fr/pub/ruby/%{rbname}-%{version}.tar.bz2
