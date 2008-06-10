@@ -1,6 +1,6 @@
 %define rbname bdb
-%define version 0.6.0
-%define release %mkrel 2
+%define version 0.6.3
+%define release %mkrel 1
 
 Summary: An interface to Berkeley DB for Ruby
 Name: ruby-%{rbname}
