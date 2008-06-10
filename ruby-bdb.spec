@@ -14,7 +14,7 @@ Source0: ftp://moulon.inra.fr/pub/ruby/%{rbname}-%{version}.tar.bz2
 Patch0:	ruby-bdb-dependency.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel
-BuildRequires: db4.2-devel
+BuildRequires: db4.6-devel
 
 %description
 This is an interface to Berkeley DB, it contains also an interface to
@@ -35,7 +35,7 @@ do
 done
 
 %build
-ruby extconf.rb
+ruby extconf.rb --vendor
 make
 make test
 
@@ -48,6 +48,6 @@ make install DESTDIR=%{buildroot}
 %files
 %defattr(-, root, root)
 %doc README.en examples docs Changes
-%{ruby_sitearchdir}/bdb.so
+%{ruby_vendorarchdir}/bdb.so
 
 
