@@ -1,6 +1,6 @@
 %define rbname bdb
 %define version 0.6.5
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: An interface to Berkeley DB for Ruby
 Name: ruby-%{rbname}
@@ -14,7 +14,7 @@ Source0: ftp://moulon.inra.fr/pub/ruby/%{rbname}-%{version}.tar.bz2
 Patch0:	ruby-bdb-dependency.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel
-BuildRequires: db4.6-devel
+BuildRequires: db4.7-devel
 
 %description
 This is an interface to Berkeley DB, it contains also an interface to
