@@ -1,6 +1,6 @@
 %define rbname bdb
 %define version 0.6.5
-%define release %mkrel 5
+%define release 6
 
 Summary: An interface to Berkeley DB for Ruby
 Name: ruby-%{rbname}
@@ -15,7 +15,7 @@ Patch0:	ruby-bdb-dependency.patch
 Patch1: ruby-bdb-db4.8.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel
-BuildRequires: db4-devel
+BuildRequires: db-devel
 
 %description
 This is an interface to Berkeley DB, it contains also an interface to
