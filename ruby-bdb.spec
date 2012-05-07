@@ -1,6 +1,6 @@
 %define rbname bdb
-%define version 0.6.5
-%define release 7
+%define version 0.6.6
+%define release 1
 
 Summary: An interface to Berkeley DB for Ruby
 Name: ruby-%{rbname}
@@ -12,7 +12,6 @@ License: GPL
 URL: http://moulon.inra.fr/ruby/bdb.html
 Source0: ftp://moulon.inra.fr/pub/ruby/%{rbname}-%{version}.tar.bz2
 Patch0:	ruby-bdb-dependency.patch
-Patch1: ruby-bdb-db4.8.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: ruby-devel
 BuildRequires: db-devel
@@ -24,7 +23,6 @@ Berkeley DB XML.
 %prep
 %setup -q -n %{rbname}-%{version}
 %patch0
-%patch1 -p0
 for f in `find examples -name \*.rb`
 do
 	if head -n1 "$f" | grep '^#!' >/dev/null;
