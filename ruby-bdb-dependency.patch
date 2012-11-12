@@ -1,0 +1,12 @@
+--- src/bdb.c~	2005-11-25 13:14:16.000000000 +0100
++++ src/bdb.c	2006-05-02 12:10:31.000000000 +0200
+@@ -144,8 +144,7 @@
+ 	rb_raise(rb_eNameError, "module already defined");
+     }
+     version = rb_tainted_str_new2(db_version(&major, &minor, &patch));
+-    if (major != DB_VERSION_MAJOR || minor != DB_VERSION_MINOR
+-	|| patch != DB_VERSION_PATCH) {
++    if (major != DB_VERSION_MAJOR || minor != DB_VERSION_MINOR) {
+         rb_raise(rb_eNotImpError, "\nBDB needs compatible versions of libdb & db.h\n\tyou have db.h version %d.%d.%d and libdb version %d.%d.%d\n",
+ 		 DB_VERSION_MAJOR, DB_VERSION_MINOR, DB_VERSION_PATCH,
+ 		 major, minor, patch);
