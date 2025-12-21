@@ -13,6 +13,7 @@ URL: https://moulon.inra.fr/ruby/bdb.html
 Source0: ftp://moulon.inra.fr/pub/ruby/%{rbname}-%{version}.tar.bz2
 Patch0:	ruby-bdb-dependency.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
+BuildRequires:	make
 BuildRequires: ruby-devel
 BuildRequires: db-devel
 
